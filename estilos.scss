@@ -1,0 +1,84 @@
+$fondo: url(../img/background.jpg);
+$colorFondo: rgb(255, 250, 245);
+$estiloNavbar: linear-gradient(to bottom, rgb(100, 0, 139), rgb(140, 0, 255));
+$estiloScrollbar: linear-gradient(
+  to bottom,
+  blue,
+  rgb(195, 0, 255),
+  purple 90%
+);
+
+body {
+  background-color: $colorFondo;
+  background-image: $fondo;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.navbar-brand {
+  padding-left: 1%;
+}
+
+.navbar {
+  padding: 0%;
+}
+
+/*anidacion*/
+.container-fluid {
+  background: $estiloNavbar;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 25px;
+  margin: 0;
+  padding: 0%;
+
+  #navbarSupportedContent {
+    padding-left: 35%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  @extend %scrollbarHerencia;
+}
+
+.container {
+  background-color: rgba(215, 250, 228, 0.493);
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.Bienvenida {
+  font-size: 35px;
+}
+
+.Descripcion {
+  font-size: 20px;
+}
+
+#imgAgujero {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+}
+
+@media screen and (max-width: 988px) {
+  #navbarSupportedContent {
+    padding-left: 0%;
+  }
+}
+
+%scrollbarHerencia {
+  background: $estiloScrollbar;
+  border-radius: 10px;
+  border: 1px white solid;
+}
